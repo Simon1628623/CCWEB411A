@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Assignment 3</title>
+<link rel="stylesheet" type="text/css" href="format.css" />
+
+
+
+<style type="text/javascript">
+a:link {color:white;}      /* unvisited link */
+a:visited {color:gray;}  /* visited link */
+a:hover {color:gray;}  /* mouse over link */
+a:active {color:white;}  /* selected link */
+</style>
+
+<script type="text/javascript" src="script.js">
+</script>
+
+</head>
+<body onload="showMessage(); runDigitalClock(); displayImage();">
+
+<div id="wrapper" style="height:1200px;">
+<div id="banner"></div>
+
+
+<div id="leftContent">
+<h2 style="font-size:30px;">Assignment 1</h2>
+<script type="text/javascript">
+			var name=prompt('What is your name?')
+			document.write(" Hello "+name +" and welcome to my website!");
+</script>
+<br/>
+
+
+
+		<p>
+		<img src="images/slideImg0.jpg" alt="tricorder" title="tricorder" width="67" height="67" onclick="viewImage()"/>
+		
+		</p>
+		<p>
+		<input type="button" value="Load slideshow" onclick="openPopupWindow2()"/>
+        </p>
+<br/>
+
+	
+	
+	<form action="forma.asp" name="myForm" onsubmit="return (validator());" method="post">
+	<p>
+	Enter first name:
+	<input type="text" name="fName"/>
+	</p>
+	<p>
+	Enter Last Name:
+	<input type="text" name="lName"/>
+	</p>
+	<p>
+	Enter Email:
+	<input type="text" name="EMail"/>
+	</p>
+	<p>
+	Enter Age:
+	<input type="text" name="Age"/>
+	</p>
+	<p>
+	Country:
+	<select name="Country">
+	<option value="choosecountry" selected> choose country </option>
+	<option value="Australia"> Australia </option>
+	<option value="Overseas"> Overseas </option>
+	</select>
+	</p>
+	<p>
+	<textarea rows="6" cols="35" readonly="readonly">
+	Terms and Conditions
+	To agree to the terms and conditions you must give me a pass. etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc etc 
+    </textarea>
+	</p>
+	<p>
+    I have read the Terms and Conditions and I accept them. 
+	<input type="checkbox" name="termcond" value="accept" />
+	<input type="submit" value="Submit"/> <input type="reset" value="Reset"/>
+	</p>
+	</form>
+	
+	
+	
+	
+	</div>
+	
+	
+<div id="rightContent">
+       
+	<input type="button" value="New Window to W3Schools" onclick="openNewWindow()"/>
+		
+    <input type="button" value="google" onclick="changeLocation()"/>
+
+	<input type="button" value="PRINT PAGE" onclick="printPage()"/>
+		
+	<input type="button" id="close" value="Close Window" onclick='window.close()'/>
+	   
+	   
+	    <p>
+		Date:
+		<script type="text/javascript">
+		displayLocaleFormatDate();
+		</script>
+		</p>
+		<p>
+		The current time is: <a id="clock"></a>
+		<script type="text/javascript"> 
+		//<![CDATA[
+		displayCurrentTime();
+		//]]>
+		</script>
+		</p>
+		
+		    <img src="images/n1.gif" id="num1" height="40" width="31" alt="" title="" />
+			<img src="images/n2.gif" id="num2" height="40" width="31" alt="" title="" />
+			<img src="images/sep.gif" height="40" width="17" alt="" title="" />
+			<img src="images/n3.gif" id="num3" height="40" width="31" alt="" title="" />
+			<img src="images/n4.gif" id="num4" height="40" width="31" alt="" title="" />
+			<img src="images/sep.gif" height="40" width="17" alt="" title="" />
+			<img src="images/n5.gif" id="num5" height="40" width="31" alt="" title="" />
+			<img src="images/n6.gif" id="num6" height="40" width="31" alt="" title="" />
+			
+			<br/>
+			
+		<input type="button" value="Say Hello" onclick="showMessage()"/> 
+		<input type="button" value="Press ME!" onclick="changeButtonName(this)"/> 
+		<input type="button" value="Question" onclick="displayQuestion()"/> 
+		<input type="button" value="Double Click" ondblclick="showAlert()"/>
+		<input type="button" value="calculator" ondblclick="openPopupWindow()" onclick="calc()"/>
+
+		
+		<br/>
+		
+		<img src="images/base.jpg" alt="lol" title="101" width="400" height="333" onmouseover="changeImage(this, 'images/red.jpg')"
+		onmouseout="changeImage(this, 'images/base.jpg')"/> 
+		
+		<br/>
+		
+		<img id="photo" src="images/car.jpg" alt="car" title="car" width="400" height="333"/>	
+		
+</div>
+</div>
+</body>
+</html>

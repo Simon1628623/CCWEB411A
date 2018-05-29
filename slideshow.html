@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Assignment 3</title>
+<link rel="stylesheet" type="text/css" href="format.css" />
+
+
+
+<style>
+a:link {color:white;}      /* unvisited link */
+a:visited {color:gray;}  /* visited link */
+a:hover {color:gray;}  /* mouse over link */
+a:active {color:white;}  /* selected link */
+</style>
+
+<script type="text/javascript">
+	//<![CDATA[
+
+		
+		var captions = new Array(
+			"look at that zoom.<br><br>",
+			"all those zombies can't get me.<br>",
+			"alien abduction.<br>",
+			"fighting boss with a tank.<br>",
+			"what happens when you attach a bus to a plane.<br>",
+			"die already.<br><br>",
+			"awesoem shot of the bus behind the plane!<br><br>"
+		);
+
+		function processPrevious() {
+			newSlide(-1);
+		} 
+
+		function processNext() {
+			newSlide(1);
+		}
+
+		
+		var index = 0;
+
+		function newSlide(direction) {
+			
+			var nbrOfSlides = captions.length;
+
+			
+			index = index + direction;
+
+			
+			if (index < 0) {
+				index = nbrOfSlides - 1;
+			} 
+
+			
+			if (index >= nbrOfSlides) {
+				index = 0;
+			} 
+
+			
+			document.getElementById("photo").src = "images/slideImg" +index +".jpg"
+
+			
+			document.getElementById("info").innerHTML = captions[index];
+		} 
+
+	//]]>
+	</script>
+
+</head>
+<body>
+
+<div id="wrapper" style="height:865px;">
+
+<h3>SlideShow</h3>
+
+			<img height="240" width="320" src="images/slideImg0.jpg"
+				alt="Our Vacation" title="Our Vacation" id="photo">
+
+			<div id="info">
+				<script type="text/javascript">
+				//<![CDATA[
+					document.write(captions[0]);
+				//]]>
+				</script>
+			</div>
+
+			<br />
+
+			<p>
+				<input type="button" value="&laquo; Previous"
+					onclick="processPrevious()">
+				<input type="button" value="Next &raquo;"
+					onclick="processNext()">
+				<input type="button" id="close" value="Close Window"
+					onclick='window.close()'>
+			</p>
+
+</div>
+
+</body>
+</html>
